@@ -43,5 +43,8 @@ public class EventLoopGroupTest
         Thread.sleep(100);
         //和直接调用submit方法一样
         defaultEventLoopGroup.next().submit(() -> log.debug("6"));
+
+        //关闭
+        defaultEventLoopGroup.shutdownGracefully();
     }
 }
