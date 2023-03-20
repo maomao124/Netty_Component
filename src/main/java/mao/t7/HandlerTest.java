@@ -67,6 +67,7 @@ public class HandlerTest
                                     {
                                         log.debug("入栈处理器：4");
                                         ctx.channel().write("hello");
+                                        //ctx.write("hello");
                                     }
                                 })
                                 .addLast(new ChannelOutboundHandlerAdapter()
